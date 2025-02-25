@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: docker pull docker pull ghcr.io/arboeckh/argocd-api@sha256:7bbf428df70fdd4d955e2c7b5ffec86e6e8c9c08d5b5192163872e9144d3de9a
+  repository: docker pull ghcr.io/arboeckh/argocd-api@sha256:7bbf428df70fdd4d955e2c7b5ffec86e6e8c9c08d5b5192163872e9144d3de9a
   pullPolicy: IfNotPresent
 
 service:
