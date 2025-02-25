@@ -28,4 +28,4 @@ spec:
         - name: DB_USER
           value: "{{ .Values.postgres.user }}"
         - name: DB_PASSWORD
-          value: "12345" 
+          value: "{{ .Values.postgres.password }}"

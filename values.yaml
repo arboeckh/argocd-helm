@@ -12,7 +12,7 @@ service:
   nodePort: 30080
 
 postgres:
-  host: "host.minikube.internal"  # For Minikube, otherwise use localhost
+  host: host.minikube.internal  # For Minikube, otherwise use localhost
   port: 5432
   dbname: dbprod
   user: newuser
