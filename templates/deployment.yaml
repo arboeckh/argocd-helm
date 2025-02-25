@@ -22,10 +22,11 @@ spec:
         - containerPort: 8000
         env:
         - name: DB_HOST
-          value: {{ .Values.postgres.host }}
+          value: "{{ .Values.postgres.host }}"
         - name: DB_PORT
-          value: {{ .Values.postgres.port }}
+          value: "{{ .Values.postgres.port }}"
         - name: DB_USER
-          value: {{ .Values.postgres.user }}
+          value: "{{ .Values.postgres.user }}"
         - name: DB_PASSWORD
-          value: {{ .Values.postgres.password }}
+          value: "{{ .Values.postgres.password }}"
+
