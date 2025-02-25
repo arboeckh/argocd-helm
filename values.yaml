@@ -1,0 +1,21 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/arboeckh/argocd-api
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 8000
+  nodePort: 30080
+
+postgres:
+  host: "host.minikube.internal"  # For Minikube, otherwise use localhost
+  port: 5432
+  dbname: dbprod
+  user: newuser
+
+
+resources: {}

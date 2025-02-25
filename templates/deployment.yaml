@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-app
+  labels:
+    app: fastapi
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: fastapi
+  template:
+    metadata:
+      labels:
+        app: fastapi
+    spec:
+      containers:
+      - name: fastapi
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        ports:
+        - containerPort: 8000
+        env:
+        - name: DB_HOST
+          value: "{{ .Values.postgres.host }}"
+        - name: DB_PORT
+          value: "{{ .Values.postgres.port }}"
+        - name: DB_USER
+          value: "{{ .Values.postgres.user }}"
+        - name: DB_PASSWORD
+          value: "12345" 

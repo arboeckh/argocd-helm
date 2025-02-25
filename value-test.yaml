@@ -1,0 +1,5 @@
+image:
+  tag: test
+
+postgres:
+  dbname: dbtest
