@@ -16,6 +16,7 @@ postgres:
   port: 5432
   dbname: dbprod
   user: newuser
+  password: 12345
 
 
 resources: {}
