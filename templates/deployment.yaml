@@ -2,8 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: argocd-api
-  labels:
-    argocd-api
+  labels: argocd-api
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
