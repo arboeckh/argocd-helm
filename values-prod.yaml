@@ -3,5 +3,11 @@ replicaCount: 3
 image:
   tag: prod
 
+service:
+  type: NodePort
+  port: 80
+  targetPort: 8000
+  nodePort: 30082
+
 postgres:
   name: dbprod
