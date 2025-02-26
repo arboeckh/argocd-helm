@@ -2,4 +2,4 @@ image:
   tag: test
 
 postgres:
-  dbname: dbtest
+  name: dbtest
