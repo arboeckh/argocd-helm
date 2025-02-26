@@ -1,5 +1,9 @@
 image:
   tag: dev
 
+migration:
+  repository: ghcr.io/arboeckh/argocd-schema@sha256:169b38eae6fa6d220c8fa872466fb5950b42e7c09ea55e43f270b10650a20660
+  pullPolicy: IfNotPresent
+
 postgres:
   name: dbdev
