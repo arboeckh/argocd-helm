@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: ghcr.io/arboeckh/argocd-api:sha256-7bbf428df70fdd4d955e2c7b5ffec86e6e8c9c08d5b5192163872e9144d3de9a.sig
+  repository: ghcr.io/arboeckh/argocd-api@sha256:7c356cd740c831eb9989672ac29a9fd391f8b2576564c54a00d4273c39ed87d2
   pullPolicy: IfNotPresent
 
 service:
