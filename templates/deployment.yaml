@@ -18,8 +18,8 @@ spec:
     spec:
       containers:
       - name: fastapi
-        image: "{{ .Values.image.repository }}"
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        image: "{{ .Values.api.repository }}"
+        imagePullPolicy: {{ .Values.api.pullPolicy }}
         ports:
         - containerPort: 8000
         env:
