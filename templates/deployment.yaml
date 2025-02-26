@@ -4,6 +4,8 @@ metadata:
   name: argocd-api
   labels: 
     app: argocd-api
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"  # Ensures it runs after the migration job
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
