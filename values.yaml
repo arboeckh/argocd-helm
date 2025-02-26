@@ -1,7 +1,11 @@
 replicaCount: 1
 
-image:
+api:
   repository: ghcr.io/arboeckh/argocd-api@sha256:7c356cd740c831eb9989672ac29a9fd391f8b2576564c54a00d4273c39ed87d2
+  pullPolicy: IfNotPresent
+
+migration:
+  repository: ghcr.io/arboeckh/argocd-schema:main
   pullPolicy: IfNotPresent
 
 service:
