@@ -16,8 +16,8 @@ spec:
       restartPolicy: Never
       containers:
         - name: migrate
-          image: "{{ .Values.migration.image.repository }}"  # Define in values.yaml
-          imagePullPolicy: {{ .Values.migration.image.pullPolicy }}
+          image: "{{ .Values.migration.repository }}"  # Define in values.yaml
+          imagePullPolicy: {{ .Values.migration.pullPolicy }}
           command: ["sh", "-c", "alembic upgrade head || exit 1"]
           env:
             - name: DB_HOST
