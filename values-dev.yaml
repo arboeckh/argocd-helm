@@ -2,4 +2,4 @@ image:
   tag: dev
 
 postgres:
-  dbname: dbdev
+  name: dbdev
