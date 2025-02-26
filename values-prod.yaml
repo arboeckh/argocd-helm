@@ -4,4 +4,4 @@ image:
   tag: prod
 
 postgres:
-  dbname: dbprod
+  name: dbprod
