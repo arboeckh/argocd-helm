@@ -4,6 +4,8 @@ metadata:
   name: db-migration
   annotations:
     argocd.argoproj.io/sync-wave: "-1"  # Runs before API deployment
+    argocd.argoproj.io/hook: PreSync  # Runs before deployments
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded  # Deletes the job after success
 spec:
   template:
     spec:
@@ -12,6 +14,7 @@ spec:
         - name: migrate
           image: "{{ .Values.migration.image.repository }}"  # Define in values.yaml
           imagePullPolicy: {{ .Values.migration.image.pullPolicy }}
+          command: ["sh", "-c", "alembic upgrade head || exit 1"]
           env:
             - name: DB_HOST
               value: "{{ .Values.postgres.host }}"
