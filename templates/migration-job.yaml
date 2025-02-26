@@ -6,6 +6,10 @@ metadata:
     argocd.argoproj.io/sync-wave: "-1"  # Runs before API deployment
     argocd.argoproj.io/hook: PreSync  # Runs before deployments
     argocd.argoproj.io/hook-delete-policy: HookSucceeded  # Deletes the job after success
+    argocd.argoproj.io/health-check: |
+    type: Job
+    failureCondition: "status.failed > 0"
+    successCondition: "status.succeeded > 0"
 spec:
   template:
     spec:
