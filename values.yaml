@@ -13,7 +13,7 @@ service:
 postgres:
   host: host.docker.internal  # For Minikube, otherwise use localhost
   port: 5432
-  dbname: dbprod
+  name: dbprod
   user: newuser
   password: 12345
 
